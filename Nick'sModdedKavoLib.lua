@@ -22,11 +22,11 @@ local themes = {
 }
 local themeStyles = {
     DarkTheme = {
-        SchemeColor = Color3.fromRGB(20, 20, 20),
+        SchemeColor = Color3.fromRGB(40, 40, 40),
         Background = Color3.fromRGB(0, 0, 0),
         Header = Color3.fromRGB(0, 0, 0),
         TextColor = Color3.fromRGB(255,255,255),
-        ElementColor = Color3.fromRGB(10, 10, 10)
+        ElementColor = Color3.fromRGB(30, 30, 30)
     },
     LightTheme = {
         SchemeColor = Color3.fromRGB(150, 150, 150),
@@ -199,6 +199,31 @@ function Kavo.CreateLib(kavName, themeList)
     Main.ClipsDescendants = true
     Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
     Main.Size = UDim2.new(0, 525, 0, 318)
+    Main.Visible = true
+    
+	ReopenButton.Name = "ReopenButton"
+	ReopenButton.Parent = ScreenGui
+	ReopenButton.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+	ReopenButton.BorderColor3 = Color3.new(0, 0, 0)
+	ReopenButton.BorderSizePixel = 0
+	ReopenButton.Position = UDim2.new(0.029495718, 0, 0.417187512, 0)
+	ReopenButton.Size = UDim2.new(0, 54, 0, 54)
+	ReopenButton.Visible = false
+	ReopenButton.Font = Enum.Font.SourceSansBold
+	ReopenButton.Text = "Minimize UI"
+	ReopenButton.TextColor3 = Color3.new(1, 1, 1)
+	ReopenButton.TextScaled = true
+	ReopenButton.TextSize = 14
+	ReopenButton.TextWrapped = true
+	ReopenButton.MouseButton1Click:Connect(function()
+		if Main.Visible == true then
+			Main.Visible = false
+			ReopenButton.Text = "Reopen"
+		elseif Main.Visible == false then
+			Main.Visible = true
+			ReopenButton.Text = "Minimize UI"
+	end
+end)
 
 local UserInputService = game:GetService("UserInputService")
 
@@ -317,30 +342,6 @@ end)
     tabFrames.BackgroundTransparency = 1.000
     tabFrames.Position = UDim2.new(0.0438990258, 0, -0.00066378375, 0)
     tabFrames.Size = UDim2.new(0, 135, 0, 283)
-
-	ReopenButton.Name = "ReopenButton"
-	ReopenButton.Parent = ScreenGui
-	ReopenButton.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
-	ReopenButton.BorderColor3 = Color3.new(0, 0, 0)
-	ReopenButton.BorderSizePixel = 0
-	ReopenButton.Position = UDim2.new(0.029495718, 0, 0.417187512, 0)
-	ReopenButton.Size = UDim2.new(0, 54, 0, 54)
-	ReopenButton.Visible = false
-	ReopenButton.Font = Enum.Font.SourceSansBold
-	ReopenButton.Text = "Minimize UI"
-	ReopenButton.TextColor3 = Color3.new(1, 1, 1)
-	ReopenButton.TextScaled = true
-	ReopenButton.TextSize = 14
-	ReopenButton.TextWrapped = true
-	ReopenButton.MouseButton1Click:Connect(function()
-		if Main.Visible == true then
-			Main.Visible = false
-			ReopenButton.Text = "Reopen"
-		elseif Main.Visible == false then
-			Main.Visible = true
-			ReopenButton.Text = "Minimize UI"
-	end
-end)
 
     tabListing.Name = "tabListing"
     tabListing.Parent = tabFrames
