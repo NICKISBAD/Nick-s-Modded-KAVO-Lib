@@ -176,8 +176,6 @@ function Kavo.CreateLib(kavName, themeList)
 
     local blurFrame = Instance.new("Frame")
 
-    Kavo:DraggingEnabled(MainHeader, Main)
-
     blurFrame.Name = "blurFrame"
     blurFrame.Parent = pages
     blurFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -210,7 +208,7 @@ Main.InputBegan:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.Touch then
 		dragging = true
 		dragStart = input.Position
-		startPos = Frame1.Position
+		startPos = Main.Position
 
 		input.Changed:Connect(function()
 			if input.UserInputState == Enum.UserInputState.End then
@@ -246,6 +244,40 @@ end)
     headerCover.CornerRadius = UDim.new(0, 4)
     headerCover.Name = "headerCover"
     headerCover.Parent = MainHeader
+    
+local UserInputService = game:GetService("UserInputService")
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+MainHeader.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = MainHeader.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+MainHeader.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		local delta = input.Position - dragStart
+		MainHeader.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+end)
 
     coverup.Name = "coverup"
     coverup.Parent = MainHeader
