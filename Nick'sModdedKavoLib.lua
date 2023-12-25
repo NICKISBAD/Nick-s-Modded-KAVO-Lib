@@ -86,7 +86,7 @@ local themeStyles = {
     },
     NicksFav = {
     	SchemeColor = Color3.fromRGB(10, 10, 10),
-    	Background = Color3.fromRGB(0,0,0),
+    	Background = Color3.new(0,0,0),
     	Header = Color3.fromRGB(0,0,0),
     	TextColor = Color3.fromRGB(255,255,255),
     	ElementColor = Color3.fromRGB(10,10,10)
