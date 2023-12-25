@@ -83,6 +83,13 @@ local themeStyles = {
         Header = Color3.fromRGB(22, 29, 31),
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(22, 29, 31)
+    },
+    NicksFav = {
+    	SchemeColor = Color3.fromRGB(10, 10, 10),
+    	Background = Color3.fromRGB(0,0,0),
+    	Header = Color3.fromRGB(0,0,0),
+    	TextColor = Color3.fromRGB(255,255,255),
+    	ElementColor = Color3.fromRGB(10,10,10)
     }
 }
 local oldTheme = ""
@@ -134,6 +141,8 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.Synapse
     elseif themeList == "Serpent" then
         themeList = themeStyles.Serpent
+    elseif themeList == "NicksFav" then
+    	themelist = themeStyles.NicksFav
     else
         if themeList.SchemeColor == nil then
             themeList.SchemeColor = Color3.fromRGB(74, 99, 135)
@@ -195,7 +204,7 @@ function Kavo.CreateLib(kavName, themeList)
     Main.BackgroundColor3 = themeList.Background
     Main.ClipsDescendants = true
     Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
-    Main.Size = UDim2.new(0, 525, 0, 318)
+    Main.Size = UDim2.new(0, 325, 0, 118)
 
 local UserInputService = game:GetService("UserInputService")
 
@@ -574,7 +583,7 @@ end)
             function Elements:NewButton(bname,tipINf, callback)
                 showLogo = showLogo or true
                 local ButtonFunction = {}
-                tipINf = tipINf or "Tip: Clicking this nothing will happen!"
+                tipINf = tipINf or "No TIP Entered"
                 bname = bname or "Click Me!"
                 callback = callback or function() end
 
