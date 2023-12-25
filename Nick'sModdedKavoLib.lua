@@ -22,11 +22,11 @@ local themes = {
 }
 local themeStyles = {
     DarkTheme = {
-        SchemeColor = Color3.fromRGB(64, 64, 64),
+        SchemeColor = Color3.fromRGB(20, 20, 20),
         Background = Color3.fromRGB(0, 0, 0),
         Header = Color3.fromRGB(0, 0, 0),
         TextColor = Color3.fromRGB(255,255,255),
-        ElementColor = Color3.fromRGB(20, 20, 20)
+        ElementColor = Color3.fromRGB(10, 10, 10)
     },
     LightTheme = {
         SchemeColor = Color3.fromRGB(150, 150, 150),
@@ -83,13 +83,6 @@ local themeStyles = {
         Header = Color3.fromRGB(22, 29, 31),
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(22, 29, 31)
-    },
-    NicksFav = {
-    	SchemeColor = Color3.fromRGB(10, 10, 10),
-    	Background = Color3.new(0,0,0),
-    	Header = Color3.fromRGB(0,0,0),
-    	TextColor = Color3.fromRGB(255,255,255),
-    	ElementColor = Color3.fromRGB(10,10,10)
     }
 }
 local oldTheme = ""
