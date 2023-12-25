@@ -175,7 +175,7 @@ function Kavo.CreateLib(kavName, themeList)
     local pages = Instance.new("Frame")
     local Pages = Instance.new("Folder")
     local infoContainer = Instance.new("Frame")
-    local ReopenButton = Instance.new("TextButton")
+    local ReButton = Instance.new("TextButton")
 
     local blurFrame = Instance.new("Frame")
 
@@ -201,27 +201,27 @@ function Kavo.CreateLib(kavName, themeList)
     Main.Size = UDim2.new(0, 525, 0, 318)
     Main.Visible = true
     
-	ReopenButton.Name = "ReopenButton"
-	ReopenButton.Parent = ScreenGui
-	ReopenButton.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
-	ReopenButton.BorderColor3 = Color3.new(0, 0, 0)
-	ReopenButton.BorderSizePixel = 0
-	ReopenButton.Position = UDim2.new(0.029495718, 0, 0.417187512, 0)
-	ReopenButton.Size = UDim2.new(0, 24, 0, 24)
-	ReopenButton.Visible = false
-	ReopenButton.Font = Enum.Font.SourceSansBold
-	ReopenButton.Text = "Minimize UI"
-	ReopenButton.TextColor3 = Color3.new(1, 1, 1)
-	ReopenButton.TextScaled = true
-	ReopenButton.TextSize = 14
-	ReopenButton.TextWrapped = true
-	ReopenButton.MouseButton1Click:Connect(function()
+	ReButton.Name = "ReButton"
+	ReButton.Parent = ScreenGui
+	ReButton.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+	ReButton.BorderColor3 = Color3.new(0, 0, 0)
+	ReButton.BorderSizePixel = 0
+	ReButton.Position = UDim2.new(0.943, 0, 0.417, 0)
+	ReButton.Size = UDim2.new(0, 54, 0, 54)
+	ReButton.Visible = false
+	ReButton.Font = Enum.Font.SourceSansBold
+	ReButton.Text = "Minimize UI"
+	ReButton.TextColor3 = Color3.new(1, 1, 1)
+	ReButton.TextScaled = true
+	ReButton.TextSize = 14
+	ReButton.TextWrapped = true
+	ReButton.MouseButton1Click:Connect(function()
 		if Main.Visible == true then
 			Main.Visible = false
-			ReopenButton.Text = "Reopen"
+			ReButton.Text = "Reopen"
 		elseif Main.Visible == false then
 			Main.Visible = true
-			ReopenButton.Text = "Minimize UI"
+			ReButton.Text = "Minimize UI"
 	end
 end)
 
