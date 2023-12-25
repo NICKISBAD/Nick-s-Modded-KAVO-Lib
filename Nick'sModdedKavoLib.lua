@@ -197,7 +197,7 @@ function Kavo.CreateLib(kavName, themeList)
     Main.BackgroundColor3 = themeList.Background
     Main.ClipsDescendants = true
     Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
-    Main.Size = UDim2.new(0, 325, 0, 118)
+    Main.Size = UDim2.new(0, 525, 0, 418)
 
 local UserInputService = game:GetService("UserInputService")
 
