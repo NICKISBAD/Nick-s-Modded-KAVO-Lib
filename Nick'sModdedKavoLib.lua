@@ -207,7 +207,7 @@ function Kavo.CreateLib(kavName, themeList)
 	ReopenButton.BorderColor3 = Color3.new(0, 0, 0)
 	ReopenButton.BorderSizePixel = 0
 	ReopenButton.Position = UDim2.new(0.029495718, 0, 0.417187512, 0)
-	ReopenButton.Size = UDim2.new(0, 54, 0, 54)
+	ReopenButton.Size = UDim2.new(0, 24, 0, 24)
 	ReopenButton.Visible = false
 	ReopenButton.Font = Enum.Font.SourceSansBold
 	ReopenButton.Text = "Minimize UI"
