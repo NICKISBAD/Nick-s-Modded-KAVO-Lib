@@ -175,6 +175,7 @@ function Kavo.CreateLib(kavName, themeList)
     local pages = Instance.new("Frame")
     local Pages = Instance.new("Folder")
     local infoContainer = Instance.new("Frame")
+    local ReopenButton = Instance.new("TextButton")
 
     local blurFrame = Instance.new("Frame")
 
@@ -197,7 +198,7 @@ function Kavo.CreateLib(kavName, themeList)
     Main.BackgroundColor3 = themeList.Background
     Main.ClipsDescendants = true
     Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
-    Main.Size = UDim2.new(0, 625, 0, 418)
+    Main.Size = UDim2.new(0, 525, 0, 318)
 
 local UserInputService = game:GetService("UserInputService")
 
@@ -316,6 +317,30 @@ end)
     tabFrames.BackgroundTransparency = 1.000
     tabFrames.Position = UDim2.new(0.0438990258, 0, -0.00066378375, 0)
     tabFrames.Size = UDim2.new(0, 135, 0, 283)
+
+	ReopenButton.Name = "ReopenButton"
+	ReopenButton.Parent = ScreenGui
+	ReopenButton.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+	ReopenButton.BorderColor3 = Color3.new(0, 0, 0)
+	ReopenButton.BorderSizePixel = 0
+	ReopenButton.Position = UDim2.new(0.029495718, 0, 0.417187512, 0)
+	ReopenButton.Size = UDim2.new(0, 54, 0, 54)
+	ReopenButton.Visible = false
+	ReopenButton.Font = Enum.Font.SourceSansBold
+	ReopenButton.Text = "Minimize UI"
+	ReopenButton.TextColor3 = Color3.new(1, 1, 1)
+	ReopenButton.TextScaled = true
+	ReopenButton.TextSize = 14
+	ReopenButton.TextWrapped = true
+	ReopenButton.MouseButton1Click:Connect(function()
+		if Main.Visible == true then
+			Main.Visible = false
+			ReopenButton.Text = "Reopen"
+		elseif Main.Visible == false then
+			Main.Visible = true
+			ReopenButton.Text = "Minimize UI"
+	end
+end)
 
     tabListing.Name = "tabListing"
     tabListing.Parent = tabFrames
