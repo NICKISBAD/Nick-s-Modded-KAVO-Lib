@@ -56,13 +56,6 @@ local themeStyles = {
         TextColor = Color3.fromRGB(200, 200, 200),
         ElementColor = Color3.fromRGB(38, 45, 71)
     },
-    Midnight = {
-        SchemeColor = Color3.fromRGB(100,0,255),
-        Background = Color3.fromRGB(0, 0, 0),
-        Header = Color3.fromRGB(0, 0, 0),
-        TextColor = Color3.fromRGB(255,255,255),
-        ElementColor = Color3.fromRGB(20, 20, 20)
-    },
     Sentinel or sentinel = {
         SchemeColor = Color3.fromRGB(230, 35, 69),
         Background = Color3.fromRGB(32, 32, 32),
